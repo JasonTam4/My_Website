@@ -1,10 +1,9 @@
 import React, { useState, useEffect, useCallback } from "react";
 import "./Navbar.css";
 
-const Navbar = () => {
+const Navbar = ({ isDarkTheme, toggleTheme }) => {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
-  const [isDarkTheme, setIsDarkTheme] = useState(false);
 
   useEffect(() => {
     document.body.classList.toggle('dark-theme', isDarkTheme);
@@ -40,17 +39,16 @@ const Navbar = () => {
     document.body.removeChild(link);
   };
 
-  const toggleTheme = () => {
-    setIsDarkTheme(!isDarkTheme);
-    document.body.classList.toggle('dark-theme');
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
     <nav 
       className={`navbar ${!isVisible ? 'navbar-hidden' : ''}`}
-      style={{
-        backgroundColor: isDarkTheme ? 'rgba(220, 220, 220, 0.0)' : 'rgba(36, 36, 36, 0.0)',
-      }}
     >
       <div className="theme-toggle">
         <label className="switch">
@@ -75,9 +73,9 @@ const Navbar = () => {
       </div>
       <div className="navbar-content">
         <ul className="nav-list">
-          <li className="nav-item">About Me</li>
-          <li className="nav-item">Experience</li>
-          <li className="nav-item">Contact Me</li>
+          <li className="nav-item" onClick={() => scrollToSection('home')}>Home</li>
+          <li className="nav-item" onClick={() => scrollToSection('experience')}>Experience</li>
+          <li className="nav-item" onClick={() => scrollToSection('contact')}>Contact Me</li>
         </ul>
         <button className="resume-button" onClick={handleResumeDownload}>Resume</button>
       </div>

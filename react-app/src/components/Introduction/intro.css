@@ -2,12 +2,13 @@
   font-family: Arial, sans-serif;
   max-width: 600px;
   margin: 0 auto;
-  padding-top: 400px;
+  margin-top: 400px;
 }
 
 h1, h2, h3 {
   margin: 0;
   line-height: 1.2;
+  transition: color var(--transition-duration) ease;
 }
 
 h1 {
@@ -19,7 +20,6 @@ h2 {
   font-size: 3rem;
   font-weight: bold;
 }
-
 
 .name {
   font-weight: bold;
@@ -35,4 +35,17 @@ p {
   font-size: 1rem;
   color: #666;
   margin-top: 20px;
+}
+
+/* Add this if you have any elements that need transition */
+.intro * {
+  transition: color var(--transition-duration) ease,
+              background-color var(--transition-duration) ease;
+}
+
+
+/* Ensure this is at the bottom of your file */
+#home {
+  padding-top: 400px !important; /* Use !important to override other styles */
+  margin-top: 0 !important; /* Reset any top margin */
 }

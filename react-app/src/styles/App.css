@@ -1,6 +1,7 @@
 /* This selector is too broad and may cause performance issues .theme-transition {*/
 body, #root, .content {
-    transition: background-color 0.4s ease, color 0.4s ease;
+    transition: background-color var(--transition-duration) ease,
+                color var(--transition-duration) ease;
   }
 
 #root {
@@ -21,4 +22,13 @@ body, #root, .content {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#home, #experience, #contact {
+  padding-top: 70px; /* Adjust this value based on your navbar height */
+  margin-top: -70px; /* Negative margin to offset the padding */
 }

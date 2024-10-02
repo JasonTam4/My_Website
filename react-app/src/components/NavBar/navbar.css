@@ -6,7 +6,8 @@
   right: 0;
   background-color: var(--navbar-bg);
   height: 70px;
-  transition: transform 0.3s ease-in-out;
+  transition: transform var(--transition-duration) ease,
+              background-color var(--transition-duration) ease;
   transform: translateY(0); /* Start in visible position */
 }
 
@@ -67,7 +68,7 @@
   right: 0;
   bottom: 0;
   background-color: var(--slider-bg);
-  transition: .4s;
+  transition: var(--transition-duration);
   border-radius: 34px;
 }
 
@@ -79,7 +80,7 @@
   left: 4px;
   bottom: 4px;
   background-color: var(--slider-button);
-  transition: .4s;
+  transition: var(--transition-duration);
   border-radius: 50%;
 }
 
@@ -102,7 +103,7 @@ input:checked + .slider:before {
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
-  transition: opacity 0.3s ease;
+  transition: opacity var(--transition-duration) ease;
 }
 
 .slider .sun-icon {
@@ -128,7 +129,8 @@ input:checked + .slider .moon-icon {
 .resume-button {
   margin-top: 35px;
   margin-left: 300px;
-  transition: color 0.4s ease, background-color 0.4s ease;
+  transition: color var(--transition-duration) ease,
+              background-color var(--transition-duration) ease;
 }
 
 body:not(.dark-theme) .resume-button {
