@@ -1,0 +1,135 @@
+#contact-me {
+  padding: 4rem 2rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin-top: 500px;
+}
+
+#contact-me h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.contact-item:hover .icon {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1rem;
+  position: relative;
+}
+
+/* Updated Email icon */
+.email-icon {
+  position: relative;
+  width: 60px;
+  height: 40px;
+  margin: 0 auto 1rem;
+}
+
+.email-icon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid var(--text-color);
+}
+
+.email-icon::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 20px solid var(--text-color);
+  transform: rotate(180deg);
+  transform-origin: center;
+}
+
+/* Phone icon */
+.phone-icon {
+  width: 40px;
+  height: 60px;
+  margin: 0 auto 1rem;
+  border: 2px solid var(--text-color);
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 5px;
+}
+
+.phone-icon::before {
+  content: '';
+  width: 15px;
+  height: 2px;
+  background-color: var(--text-color);
+  border-radius: 1px;
+}
+
+.phone-icon::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--text-color);
+  border-radius: 50%;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.contact-item p {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-info {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.contact-info:hover {
+  color: var(--hover-color);
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}

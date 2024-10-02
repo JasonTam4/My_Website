@@ -1,0 +1,38 @@
+.intro {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 400px;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+
+.name {
+  font-weight: bold;
+}
+
+.highlight {
+  background: #000;
+  color: #fff;
+  padding: 0 10px;
+}
+
+p {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 20px;
+}

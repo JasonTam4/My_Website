@@ -1,0 +1,112 @@
+#experience {
+  padding: 4rem 2rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.experience-card {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: var(--card-bg-color);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-top: 500px;
+}
+
+.experience-header {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  background-color: var(--cfl-red);
+  color: white;
+}
+
+.company-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+  margin-right: 2rem;
+}
+
+.title-block {
+  flex-grow: 1;
+}
+
+.title-block h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.title-block h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+}
+
+.duration {
+  font-style: italic;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  color: var(--text-color);
+}
+
+.experience-content {
+  padding: 2rem;
+}
+
+.experience-content h5 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--cfl-red);
+}
+
+.achievements {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.achievements li {
+  margin-bottom: 0.8rem;
+  position: relative;
+  padding-left: 20px;
+  line-height: 1.4;
+}
+
+
+.tech-stack {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.tech-tags span {
+  background-color: var(--cfl-red);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .experience-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .company-logo {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+}

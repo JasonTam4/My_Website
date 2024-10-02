@@ -76,8 +76,7 @@ const Navbar = () => {
       <div className="navbar-content">
         <ul className="nav-list">
           <li className="nav-item">About Me</li>
-          <li className="nav-item">Skills</li>
-          <li className="nav-item">Projects</li>
+          <li className="nav-item">Experience</li>
           <li className="nav-item">Contact Me</li>
         </ul>
         <button className="resume-button" onClick={handleResumeDownload}>Resume</button>
