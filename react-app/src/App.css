@@ -1,8 +1,30 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0 auto; /* Centers horizontally */
   padding: 2rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.content {
+  padding-top: 70px; /* Should match the navbar height */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers content vertically */
+}
+
+.vite-react-content {
+  /* Center the content vertically and horizontally */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100vh; /* Remove any margin */
 }
 
 .logo {
@@ -38,5 +60,5 @@
 }
 
 .read-the-docs {
-  color: #888;
+  color: var(--text-color);
 }

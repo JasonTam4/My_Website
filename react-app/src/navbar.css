@@ -1,0 +1,142 @@
+/* Navbar.css */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--navbar-bg);
+  height: 70px;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(0); /* Start in visible position */
+}
+
+.navbar-hidden {
+  transform: translateY(-120%); /* Move up by 100% of its height */
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: center; /* This will center your nav items */
+  align-items: center;
+  height: 100%;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  margin-left: 430px;
+  padding: 0;
+  height: 100%;
+}
+
+.nav-item {
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0 30px 10px; /* Added bottom padding */
+  color: var(--navbar-text);
+  display: flex;
+  align-items: flex-end; /* Align text to the bottom */
+  height: 100%;
+  font-size: 20px; /* Increase font size */
+  margin-left: 15px;
+}
+
+.nav-item:hover {
+  color: #2894f4;
+}
+
+/* Toggle */
+.theme-toggle {
+  margin-top: 20px;
+  margin-left: 150px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  width: 60px;
+  height: 34px;
+}
+
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--slider-bg);
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--slider-button);
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: var(--slider-active);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider .icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: #333;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: opacity 0.3s ease;
+}
+
+.slider .sun-icon {
+  left: 8px;
+  opacity: 1;
+}
+
+.slider .moon-icon {
+  right: 8px;
+  opacity: 0;
+}
+
+input:checked + .slider .sun-icon {
+  opacity: 0;
+}
+
+input:checked + .slider .moon-icon {
+  opacity: 1;
+}
+
+
+/* Resume Button */
+.resume-button {
+  margin-top: 35px;
+  margin-left: 300px;
+  transition: color 0.4s ease, background-color 0.4s ease;
+}
+
+body:not(.dark-theme) .resume-button {
+  color: #ffffff;
+  background-color: #242424;
+}
+
+body.dark-theme .resume-button {
+  color: #242424;
+  background-color: #ffffff;
+}
