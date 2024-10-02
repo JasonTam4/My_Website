@@ -1,13 +1,9 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
   --bg-color: #ffffff;
   --text-color: #333333;
   --accent-color: #e5e5e5;
   --cfl-red: #c42128;
-  --card-bg-color: #f9f9f9;
+  --card-bg-color: #f8f8f8;
   --text-secondary-color: #666666;
   --navbar-bg: rgba(255, 255, 255, 0.7);
   --navbar-text: #213547;
@@ -16,20 +12,20 @@
   --slider-button: #fff;
   --slider-active: #2196F3;
   --transition-duration: 0.4s;
-
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  transition: all var(--transition-duration) ease-in-out;
+  --transition: all var(--transition-duration) ease;
 }
 
 body {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
   min-height: 100vh;
   background-color: var(--bg-color);
   color: var(--text-color);
   margin: 0;
   padding: 0;
-  transition: background-color var(--transition-duration) ease,
-              color var(--transition-duration) ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body.dark-theme {
@@ -37,11 +33,11 @@ body.dark-theme {
   --text-color: rgba(255, 255, 255, 0.87);
   --navbar-bg: rgba(36, 36, 36, 0.7);
   --navbar-text: rgba(255, 255, 255, 0.87);
-  --card-bg-color: #2a2a2a;
+  --card-bg-color: rgba(255, 255, 255, 0.05); /* Slightly lighter than the dark background */
   --text-secondary-color: #b0b0b0;
 }
 
-html, #root {
+html, body, #root {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -49,8 +45,9 @@ html, #root {
 }
 
 * {
-  transition: background-color var(--transition-duration) ease,
-              color var(--transition-duration) ease,
-              border-color var(--transition-duration) ease,
-              box-shadow var(--transition-duration) ease;
+  transition: var(--transition);
+}
+
+html {
+  scroll-behavior: smooth;
 }

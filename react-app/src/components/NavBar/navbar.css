@@ -6,18 +6,17 @@
   right: 0;
   background-color: var(--navbar-bg);
   height: 70px;
-  transition: transform var(--transition-duration) ease,
-              background-color var(--transition-duration) ease;
-  transform: translateY(0); /* Start in visible position */
+  transform: translateY(0);
+  z-index: 1000; /* Add this line to ensure it's above other elements */
 }
 
 .navbar-hidden {
-  transform: translateY(-120%); /* Move up by 100% of its height */
+  transform: translateY(-120%);
 }
 
 .navbar-content {
   display: flex;
-  justify-content: center; /* This will center your nav items */
+  justify-content: center;
   align-items: center;
   height: 100%;
 }
@@ -34,12 +33,12 @@
 .nav-item {
   font-weight: 500;
   cursor: pointer;
-  padding: 0 30px 10px; /* Added bottom padding */
+  padding: 0 30px 10px;
   color: var(--navbar-text);
   display: flex;
-  align-items: flex-end; /* Align text to the bottom */
+  align-items: flex-end;
   height: 100%;
-  font-size: 20px; /* Increase font size */
+  font-size: 20px;
   margin-left: 15px;
 }
 
@@ -47,18 +46,15 @@
   color: #2894f4;
 }
 
-/* Toggle */
 .theme-toggle {
   margin-top: 20px;
   margin-left: 150px;
   position: fixed;
   top: 20px;
   left: 20px;
-  z-index: 1000;
   width: 60px;
   height: 34px;
 }
-
 
 .slider {
   position: absolute;
@@ -68,7 +64,6 @@
   right: 0;
   bottom: 0;
   background-color: var(--slider-bg);
-  transition: var(--transition-duration);
   border-radius: 34px;
 }
 
@@ -80,7 +75,6 @@
   left: 4px;
   bottom: 4px;
   background-color: var(--slider-button);
-  transition: var(--transition-duration);
   border-radius: 50%;
 }
 
@@ -129,8 +123,9 @@ input:checked + .slider .moon-icon {
 .resume-button {
   margin-top: 35px;
   margin-left: 300px;
-  transition: color var(--transition-duration) ease,
-              background-color var(--transition-duration) ease;
+  transition: var(--transition);
+  color: var(--navbar-text);
+  background-color: var(--navbar-bg);
 }
 
 body:not(.dark-theme) .resume-button {
@@ -143,7 +138,6 @@ body.dark-theme .resume-button {
   background-color: #ffffff;
 }
 
-
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -153,11 +147,12 @@ button {
   font-family: inherit;
   background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;

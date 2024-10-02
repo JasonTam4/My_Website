@@ -1,116 +1,87 @@
 #experience {
   padding: 4rem 2rem;
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  margin-top: 300px;
+}
+
+#experience h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.experience-container {
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .experience-card {
-  max-width: 900px;
-  margin: 0 auto;
   background-color: var(--card-bg-color);
   border-radius: 15px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.experience-card:hover {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  margin-top: 500px;
-  transition: background-color var(--transition-duration) ease,
-              box-shadow var(--transition-duration) ease;
+  transform: translateY(-5px);
 }
 
 .experience-header {
   display: flex;
   align-items: center;
-  padding: 2rem;
-  background-color: var(--cfl-red);
-  color: white;
+  margin-bottom: 1rem;
 }
 
 .company-logo {
-  width: 80px;
-  height: 80px;
+  width: 110px;
+  height: 110px;
   object-fit: contain;
-  background-color: white;
-  border-radius: 50%;
-  padding: 10px;
-  margin-right: 2rem;
+  margin-right: 1rem;
 }
 
-.title-block {
+.job-title {
   flex-grow: 1;
 }
 
-.title-block h3 {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
+.job-title h3 {
+  font-size: 1.4rem;
+  margin: 0;
 }
 
-.title-block h4 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-  opacity: 0.9;
-}
-
-.duration {
-  font-style: italic;
-  font-size: 0.9rem;
+.job-title h4 {
+  font-size: 1.1rem;
+  margin: 0;
   opacity: 0.8;
-  color: var(--text-color);
 }
 
-.experience-content {
-  padding: 2rem;
-}
-
-.experience-content h5 {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-  color: var(--cfl-red);
-  transition: color var(--transition-duration) ease;
-}
-
-.achievements {
-  list-style-type: none;
-  padding: 0;
-  margin-bottom: 2rem;
-}
-
-.achievements li {
-  margin-bottom: 0.8rem;
-  position: relative;
-  padding-left: 20px;
-  line-height: 1.4;
-}
-
-
-.tech-stack {
-  background-color: rgba(0, 0, 0, 0.05);
-  padding: 1.5rem;
-  border-radius: 10px;
-  transition: background-color var(--transition-duration) ease;
-}
-
-.tech-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-}
-
-.tech-tags span {
-  background-color: var(--cfl-red);
-  color: white;
-  padding: 5px 10px;
-  border-radius: 15px;
+.job-duration {
   font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.job-location {
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.job-description, .job-responsibilities {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 1rem;
 }
 
 @media (max-width: 768px) {
   .experience-header {
     flex-direction: column;
-    text-align: center;
+    align-items: flex-start;
   }
 
   .company-logo {
-    margin-right: 0;
     margin-bottom: 1rem;
+  }
+
+  .job-duration {
+    margin-top: 0.5rem;
   }
 }

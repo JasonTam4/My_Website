@@ -30,13 +30,8 @@ const Navbar = ({ isDarkTheme, toggleTheme }) => {
   }, [controlNavbar]);
 
   const handleResumeDownload = () => {
-    const resumeUrl = '/public/Jason_Tam_Resume.pdf';
-    const link = document.createElement('a');
-    link.href = resumeUrl;
-    link.download = 'Jason_Tam_Resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    const resumeUrl = `${import.meta.env.BASE_URL}Jason_Tam_Resume.pdf`;
+    window.open(resumeUrl, '_blank');
   };
 
   const scrollToSection = (sectionId) => {
@@ -73,7 +68,7 @@ const Navbar = ({ isDarkTheme, toggleTheme }) => {
       </div>
       <div className="navbar-content">
         <ul className="nav-list">
-          <li className="nav-item" onClick={() => scrollToSection('home')}>Home</li>
+          <li className="nav-item" onClick={() => scrollToSection('intro')}>Home</li>
           <li className="nav-item" onClick={() => scrollToSection('experience')}>Experience</li>
           <li className="nav-item" onClick={() => scrollToSection('contact')}>Contact Me</li>
         </ul>
