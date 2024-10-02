@@ -6,7 +6,7 @@ const Experience = () => {
     <section id="experience">
       <div className="experience-card">
         <div className="experience-header">
-          <img src="/cfl-logo.png" alt="CFL Logo" className="company-logo" />
+          <img src={`${import.meta.env.BASE_URL}cfl-logo.png`} alt="CFL Logo" className="company-logo" />
           <div className="title-block">
             <h3>Data Engineer</h3>
             <h4>Canadian Football League (CFL)</h4>
