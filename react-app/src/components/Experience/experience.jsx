@@ -1,13 +1,12 @@
 import React from "react";
 import "./experience.css";
-import cflLogo from "/public/cfl-logo.png"; // Make sure this path is correct
 
 const Experience = () => {
   return (
     <section id="experience">
       <div className="experience-card">
         <div className="experience-header">
-          <img src={cflLogo} alt="CFL Logo" className="company-logo" />
+          <img src="/cfl-logo.png" alt="CFL Logo" className="company-logo" />
           <div className="title-block">
             <h3>Data Engineer</h3>
             <h4>Canadian Football League (CFL)</h4>
