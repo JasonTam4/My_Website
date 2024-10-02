@@ -20,6 +20,8 @@ body {
   min-height: 100vh;
   background-color: var(--bg-color);
   color: var(--text-color);
+  margin: 0;
+  padding: 0;
 }
 
 body.dark-theme {
@@ -29,12 +31,12 @@ body.dark-theme {
   --navbar-text: rgba(255, 255, 255, 0.87);
 }
 
-/* This selector is too broad and may cause performance issues */
+/* This selector is too broad and may cause performance issues .theme-transition {*/
 body, #root, .content {
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-html, body, #root {
+html, #root {
   margin: 0;
   padding: 0;
   height: 100%;

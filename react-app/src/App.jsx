@@ -1,6 +1,7 @@
-import './App.css'
-import Navbar from './navbar.jsx';
-import Logos from './logos.jsx';
+import { useState } from 'react'
+import './styles/App.css'  // Updated path
+import Navbar from './components/Navbar/Navbar.jsx'
+import Logos from './components/Logos/Logos.jsx'
 
 function App() {
 
